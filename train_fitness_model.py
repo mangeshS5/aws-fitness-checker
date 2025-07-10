@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import LabelEncoder
-import pickle
+import joblib
 
 # Sample dataset
 data = {
@@ -32,6 +32,6 @@ model.fit(X_train, y_train)
 
 # Save the model and label encoder
 with open("fitness_model.pkl", "wb") as f:
-    pickle.dump((model, le), f)
+    joblib.dump((model, le), "fitness_model.joblib")
 
 print("✅ fitness_model.pkl file has been created successfully!")
