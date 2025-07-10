@@ -2,6 +2,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import joblib
 
 # Load the trained model and label encoder
 with open("fitness_model.pkl", "rb") as f:
